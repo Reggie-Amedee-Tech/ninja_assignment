@@ -17,10 +17,19 @@ class ninja {
     }
 }
 
-const ghostRunner = new ninja('GhostRunner', 100);
+class sensei extends ninja {
+    constructor(name, health) {
+        super(name, health)
+        this.health = 200
+        this.wisdom = 10
+    }
+    speakWisdom(wise) {
+        const wisdom = super.drinkSake(wise)
+    }
+}
 
-ghostRunner.drinkSake(50)
+const mara = new sensei('Mara')
 
-ghostRunner.showStats()
+mara.speakWisdom(20)
 
-console.log(ghostRunner)
+mara.showStats()
